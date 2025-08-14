@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Same head content as home page -->
+    <title>Contact Us | Compress Image Resizer</title>
+    <meta name="description" content="Contact the team behind Compress Image Resizer with questions, feedback, or support requests about our free image compression tool.">
+</head>
+<body>
+    <!-- Same header as home page -->
+    
+    <div class="container">
+        <div class="main-content">
+            <div class="content-area">
+                <article>
+                    <h1>Contact Us</h1>
+                    <p>We'd love to hear from you! Whether you have a question about our image compression tool, want to report a bug, or have suggestions for improvement, please reach out using the form below or via email.</p>
+                    
+                    <div class="contact-form" style="max-width: 600px; margin: 30px auto;">
+                        <form id="contactForm">
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label for="name" style="display: block; margin-bottom: 5px; font-weight: 500;">Your Name</label>
+                                <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; border: 1px solid #e0e0e0; border-radius: 4px;">
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label for="email" style="display: block; margin-bottom: 5px; font-weight: 500;">Email Address</label>
+                                <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #e0e0e0; border-radius: 4px;">
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label for="subject" style="display: block; margin-bottom: 5px; font-weight: 500;">Subject</label>
+                                <input type="text" id="subject" name="subject" required style="width: 100%; padding: 10px; border: 1px solid #e0e0e0; border-radius: 4px;">
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label for="message" style="display: block; margin-bottom: 5px; font-weight: 500;">Message</label>
+                                <textarea id="message" name="message" rows="6" required style="width: 100%; padding: 10px; border: 1px solid #e0e0e0; border-radius: 4px;"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                        </form>
+                        
+                        <div id="formSuccess" style="display: none; margin-top: 20px; padding: 15px; background-color: #e8f5e9; border-radius: 4px; color: #2e7d32;">
+                            Thank you for your message! We'll get back to you as soon as possible.
+                        </div>
+                    </div>
+                    
+                    <h2>Alternative Contact Methods</h2>
+                    <p>Prefer to contact us directly? You can reach us at:</p>
+                    <ul>
+                        <li><strong>Email:</strong> <a href="mailto:contact@compressimageresizer.com">contact@compressimageresizer.com</a></li>
+                    </ul>
+                    
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Before contacting us, you might find the answer to your question in our <a href="/faq">FAQ section</a>.</p>
+                </article>
+            </div>
+            
+            <!-- Same sidebar as home page -->
+        </div>
+    </div>
+    
+    <!-- Same footer as home page -->
+    
+    <script>
+        // Simple form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real implementation, you would send the form data to a server
+            // For this demo, we'll just show a success message
+            
+            document.getElementById('contactForm').style.display = 'none';
+            document.getElementById('formSuccess').style.display = 'block';
+            
+            // Reset form after 5 seconds
+            setTimeout(function() {
+                document.getElementById('contactForm').reset();
+                document.getElementById('contactForm').style.display = 'block';
+                document.getElementById('formSuccess').style.display = 'none';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
